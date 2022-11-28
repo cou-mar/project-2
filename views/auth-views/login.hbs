@@ -1,0 +1,22 @@
+<h1>log in</h1>
+
+<form action="/auth/login" method="post">
+
+    <div>
+        <label for="emailId">email</label>
+        <input type="email" name="email" id="emailId">
+    </div>
+
+    <div>
+        <label for="passwordId">password</label>
+        <input type="password" name="password" id="passwordId">
+    </div>
+
+    <button type="submit">let's go</button>
+</form>
+
+{{#if message}}
+<p style="color: red;">{{message}}</p>
+{{/if}}
+
+<h4 style="font-style: oblique;">[insert tagline here]</h4>

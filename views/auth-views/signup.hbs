@@ -1,0 +1,27 @@
+<h1>sign up</h1>
+
+<form action="/auth/signup" method="post">
+
+    <div>
+        <label for="nameId">name</label>
+        <input type="name" name="name" id="nameId">
+    </div>
+
+    <div>
+        <label for="emailId">email</label>
+        <input type="email" name="email" id="emailId">
+    </div>
+
+    <div>
+        <label for="passwordId">password</label>
+        <input type="password" name="password" id="passwordId">
+    </div>
+
+    <button type="submit">submit</button>
+</form>
+
+{{#if message}}
+<p style="color: red;">{{message}}</p>
+{{/if}}
+
+<h4 style="font-style: oblique;">[insert tagline here]</h4>
