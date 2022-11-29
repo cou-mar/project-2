@@ -14,6 +14,12 @@ router.get('/add-list', (req, res, next) => {
 });
 
 router.post('/add-list', (req, res, next) => {
+    console.log("Checking values:", req.body.title, req.body.content)
+    if(!req.body.title || !req.body.content || !req.body.content.join('') ){
+        res.render('list-views/add-list.hbs', {message: 'please add a title and at least one list item before submitting'})
+        return;
+    }
+    
     List.create({
         title: req.body.title,
         content: req.body.content

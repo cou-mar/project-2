@@ -1,13 +1,27 @@
 <h1>create new list</h1>
 
 <form action="/list/add-list" method="post">
-    <ol>
+
+<input type="text" placeholder="list title" name="title">
+
+<div class="list" style="width: 220px;">
+    
+    <ol id="list">
         <li>
-            <input type="text"> <button>+</button>
+            <input type="text" name="content">
         </li>
     </ol>
-    
-    {{!-- plus button to add an extra li to form --}}
+ <button class="add-new" style="float: right;
+ margin-top: -35px;" type="button">+</button>
+</div>
 
-    <button>Submit</button>
+    <button type="submit">Submit</button>
 </form>
+
+
+
+{{#if message}}
+<p style="color: red;">{{message}}</p>
+{{/if}}
+
+<script src="/javascripts/eventListener.js"></script>
