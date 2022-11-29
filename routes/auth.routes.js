@@ -81,7 +81,7 @@ router.post('/login', (req, res, next) => {
 router.get('/logout', (req, res, next) => {
     //this will clear the cookie from the DB and end the session
     req.session.destroy();
-    res.render('auth-views/login', {message: 'you have successfully logged out. see you next time!'})
+    res.render('auth-views/login.hbs', {message: 'you have successfully logged out. see you next time!'})
 })
 
 module.exports = router
