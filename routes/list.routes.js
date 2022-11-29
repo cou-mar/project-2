@@ -13,6 +13,8 @@ router.get('/add-list', (req, res, next) => {
     res.render('list-views/add-list.hbs')
 });
 
+//router.post for add-list
+
 router.get('/all-lists', (req, res, next) => {
     res.render('list-views/all-lists.hbs')
 })
