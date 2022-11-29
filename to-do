@@ -3,10 +3,9 @@ Mon 11/28
     - models
 
 Tues 11/29
+    - all list and note get routes so all pages function
     - middleware
-    - lists
-    - notes
-    - nav
+    - nav 
 
 Wed 11/30
     - styling 

@@ -13,7 +13,19 @@ router.get('/add-list', (req, res, next) => {
     res.render('list-views/add-list.hbs')
 });
 
-//router.post for add-list
+router.post('/add-list', (req, res, next) => {
+    List.create({
+        title: req.body.title,
+        content: req.body.content
+    })
+    .then((createdList) => {
+        console.log('MY NEW LIST', createdList)
+        res.redirect('/list/all-lists')
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+});
 
 router.get('/all-lists', (req, res, next) => {
     res.render('list-views/all-lists.hbs')
