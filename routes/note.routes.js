@@ -13,7 +13,19 @@ router.get('/add-note', (req, res, next) => {
     res.render('note-views/add-note.hbs')
 });
 
-//router.post for add-note
+router.post('/add-note', (req, res, next) => {
+    Note.create({
+        title: req.body.title,
+        content: req.body.content
+    })
+    .then((createdNote) => {
+        console.log('MY NEW NOTE', createdNote)
+        res.redirect('/note/all-notes')
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+});
 
 router.get('/all-notes', (req, res, next) => {
     res.render('note-views/all-notes.hbs')
