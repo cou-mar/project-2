@@ -4,11 +4,13 @@ Mon 11/28
 
 Tues 11/29
     - all list and note get routes so all pages function
-    - add ol list item line
-    - nav 
+    - add ol list item line upon clicking + button
+    - if statements checking for empty lists/notes
 
 Wed 11/30
+    - thumbnail previews for added lists and notes
     - middleware
+    - nav 
     - styling 
 
 Thurs 12/1

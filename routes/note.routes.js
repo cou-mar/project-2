@@ -7,13 +7,18 @@ const Note = require('../models/note.models');
 
 router.get('/note-home', (req, res, next) => {
     res.render('note-views/note-home.hbs') 
-})
+});
 
 router.get('/add-note', (req, res, next) => {
     res.render('note-views/add-note.hbs')
 });
 
 router.post('/add-note', (req, res, next) => {
+if(!req.body.title || !req.body.content){
+    res.render('note-views/add-note.hbs', {message: 'please add a title and some text before submitting'})
+    return;
+}
+
     Note.create({
         title: req.body.title,
         content: req.body.content
@@ -29,6 +34,6 @@ router.post('/add-note', (req, res, next) => {
 
 router.get('/all-notes', (req, res, next) => {
     res.render('note-views/all-notes.hbs')
-})
+});
 
 module.exports = router;

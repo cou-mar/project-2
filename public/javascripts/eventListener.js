@@ -1,4 +1,4 @@
-console.log("SCRIPT LINKED")
+// console.log("SCRIPT LINKED")
 
 let listButton = document.querySelectorAll('.add-new')
 
@@ -8,9 +8,6 @@ let parent = document.getElementById('list')
 
 document.querySelector('.add-new').addEventListener("click", function(e){
     let child = document.createElement('li')
-    child.innerHTML = `  <input type="text" name="content">`
+    child.innerHTML = `<input type="text" name="content">`
     document.getElementById('list').appendChild(child)
   });
-
-
-

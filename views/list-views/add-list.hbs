@@ -2,7 +2,7 @@
 
 <form action="/list/add-list" method="post">
 
-<input type="text" placeholder="list title" name="title">
+<input type="text" name="title" placeholder="list title">
 
 <div class="list" style="width: 220px;">
     
@@ -11,14 +11,13 @@
             <input type="text" name="content">
         </li>
     </ol>
- <button class="add-new" style="float: right;
- margin-top: -35px;" type="button">+</button>
+    
+    <button class="add-new" style="float: right;
+    margin-top: -35px;" type="button">+</button>
 </div>
 
     <button type="submit">Submit</button>
 </form>
-
-
 
 {{#if message}}
 <p style="color: red;">{{message}}</p>
