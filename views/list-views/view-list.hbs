@@ -1,0 +1,14 @@
+<h3>{{title}}</h3>
+<p>{{content}}</p>
+
+<form action="/list/{{_id}}/edit-list" method="get" style="text-decoration: none; color: black;">
+    <button type="submit">edit</button>
+</form>
+
+<form action="/list/{{_id}}/delete-list" method="post" style="text-decoration: none; color: black;">
+    <button type="submit">delete</button>
+</form>
+
+<button>
+    <a href="/list/all-lists" style="text-decoration: none; color: black;">back</a>
+</button>

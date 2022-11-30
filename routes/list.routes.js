@@ -51,12 +51,40 @@ router.get('/:id', (req, res, next) => {
     List.findById(req.params.id)
       .then((foundOneList) => {
         console.log(foundOneList)
-        res.render('list-views/view-one.hbs', foundOneList);
+        res.render('list-views/view-list.hbs', foundOneList);
       })
       .catch((err) => {
         console.log(err);
         res.send(err);
       });
+  });
+
+  router.get('/:id/edit-list', (req, res, next) => {
+    List.findById(req.params.id)
+    .then((foundOneList) => {
+        console.log('THIS IS THE LIST I WANT TO EDIT');
+        res.render('list-views/edit-list.hbs', foundOneList)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+  });
+
+  router.post('/:id/edit-list', (req, res, next) => {
+    List.findByIdAndUpdate(req.params.id, {
+        title: req.body.title,
+        content: req.body.content
+    },
+    {new: true}
+        //this will show the object after the changes have been made
+    )
+    .then((updatedList) => {
+        console.log('CHANGED ROOM:', updatedList);
+        res.redirect('/list/all-lists')
+    })
+    .catch((err) => {
+        console.log(err)
+    })
   });
 
   router.post('/:id/delete-list', (req, res, next) => {

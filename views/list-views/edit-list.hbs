@@ -1,0 +1,18 @@
+<form action="/list/{{_id}}/edit-list" method="post">
+    <input type="text" name="title" value="{{title}}">
+
+    {{#each content}}
+        <input type="text" name="content" value="{{this}}">
+    {{/each}}
+
+    <button type="submit">submit changes</button>
+
+    <button>
+        <a href="/list/all-lists" style="text-decoration: none; color: black;">back</a> 
+        {{!-- CHANGE THIS TO EDITING THE PARTICULAR LIST --}}
+    </button>
+
+    {{!-- <form action="/list/{{_id}}/edit-list" method="get" style="text-decoration: none; color: black;">
+        <button type="submit">back</button>
+    </form> --}}
+</form>

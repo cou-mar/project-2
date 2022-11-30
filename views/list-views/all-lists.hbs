@@ -5,12 +5,12 @@
     <p>{{content}}</p>
 
     <button>
-         <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
+        <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
     </button>
 
-    <button>
-        <a href="" style="text-decoration: none; color: black;">edit</a>
-    </button>
+    <form action="/list/{{_id}}/edit-list" method="get">
+        <button type="submit">edit</button>
+    </form>
     
     <form action="/list/{{_id}}/delete-list" method="post">
         <button type="submit">delete</button>
