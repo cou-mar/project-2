@@ -47,7 +47,7 @@ router.get('/all-lists', (req, res, next) => {
     })
 });
 
-router.get("/:id", (req, res, next) => {
+router.get('/:id', (req, res, next) => {
     List.findById(req.params.id)
       .then((foundOneList) => {
         console.log(foundOneList)
@@ -57,6 +57,17 @@ router.get("/:id", (req, res, next) => {
         console.log(err);
         res.send(err);
       });
+  });
+
+  router.post('/:id/delete-list', (req, res, next) => {
+    List.findById(req.params.id)
+    .then((foundOneList) => {
+        foundOneList.delete()
+        res.redirect('/list/all-lists')
+    })
+    .catch((err) => {
+        console.log(err)
+    })
   });
 
 module.exports = router;

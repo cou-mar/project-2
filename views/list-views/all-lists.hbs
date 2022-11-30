@@ -3,16 +3,22 @@
 {{#each foundLists}}
     <h3>{{title}}</h3>
     <p>{{content}}</p>
+
     <button>
          <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
     </button>
+
     <button>
-        <a href="">edit</a>
+        <a href="" style="text-decoration: none; color: black;">edit</a>
     </button>
-    <button>
-        <a href="">delete</a>
-    </button>
+    
+    <form action="/list/{{_id}}/delete-list" method="post">
+        <button type="submit">delete</button>
+    </form>
 {{/each}}
 
+<br>
 
-
+<button>
+    <a href="/list/list-home" style="text-decoration: none; color: black;">back</a>
+</button>

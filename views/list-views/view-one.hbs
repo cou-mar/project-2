@@ -5,9 +5,9 @@
     <a href="" style="text-decoration: none; color: black;">edit</a>
 </button>
 
-<button>
-    <a href="" style="text-decoration: none; color: black;">delete</a>
-</button>
+<form action="/list/{{_id}}/delete-list" method="post">
+    <button type="submit">delete</button>
+</form>
 
 <button>
     <a href="/list/all-lists" style="text-decoration: none; color: black;">back</a>
