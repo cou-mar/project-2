@@ -71,6 +71,10 @@ router.get('/:id', isLoggedIn, (req, res, next) => {
   });
 
   router.post('/:id/edit-list', isLoggedIn, (req, res, next) => {
+    if(Array.isArray(req.body.content)){
+        //checking if there is an empty line in the list. if it is empty, then remove it and shrink the list
+        req.body.content = req.body.content.filter(e => e.length)
+    }
     List.findByIdAndUpdate(req.params.id, {
         title: req.body.title,
         content: req.body.content

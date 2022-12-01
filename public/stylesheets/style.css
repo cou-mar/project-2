@@ -9,17 +9,21 @@ body {
 }
 
 a {
-  color: black;
+  color: #c66d5e;
   text-decoration: none;
 }
 
-.button {
+a:hover {
+  color: #fedec4;
+}
+
+button {
   transition-duration: 0.4s;
-  background-color: white;
+  background-color: #fedec4;
   border: none;
   border-color: #f8a889;
   color: black;
-  padding: 15px 32px;
+  padding: 4px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -28,7 +32,7 @@ a {
 
 }
 
-.button:hover {
+button:hover {
   background-color: #f8a889;
   color: white;
 }
