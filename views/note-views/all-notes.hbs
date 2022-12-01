@@ -8,22 +8,26 @@
 
 <h1>all notes</h1>
 
-{{#each foundNotes}}
-    <h3>{{title}}</h3>
-    <p>{{content}}</p>
+<div class="list-container">
+    {{#each foundNotes}}
+    <div>
+        <h3 style="font-size: 18px">{{title}}</h3>
+        <p style="font-size: 13px;">{{content}}</p>
 
-    <button>
-        <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
-    </button>
+        <button>
+            <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
+        </button>
 
-    <form action="/note/{{_id}}/edit-note" method="get">
-        <button type="submit">edit</button>
-    </form>
-    
-    <form action="/note/{{_id}}/delete-note" method="post">
-        <button type="submit">delete</button>
-    </form>
-{{/each}}
+        <form action="/note/{{_id}}/edit-note" method="get">
+            <button type="submit">edit</button>
+        </form>
+        
+        <form action="/note/{{_id}}/delete-note" method="post">
+            <button type="submit">delete</button>
+        </form>
+        </div>
+    {{/each}}
+</div>
 
 <br>
 
