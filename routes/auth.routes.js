@@ -69,7 +69,7 @@ router.post('/login', (req, res, next) => {
             let correctPassword = bcryptjs.compareSync(req.body.password, foundUser.password);
             if(correctPassword){
                 req.session.user = foundUser;
-                res.render('main.hbs')
+                res.redirect('/main')
             } else {
                 res.render('auth-views/login.hbs', {message: 'incorrect email or password provided'})
             }

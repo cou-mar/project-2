@@ -15,6 +15,7 @@ Wed 11/30
 Thurs 12/1
     - middleware
     - add + to edit lists hbs so a new line can be added
+    - ability to remove line from list
     - styling
     - api
     - nodemailer
