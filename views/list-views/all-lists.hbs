@@ -8,22 +8,28 @@
 
 <h1>all lists</h1>
 
-{{#each foundLists}}
-    <h3>{{title}}</h3>
-    <p>{{content}}</p>
+<div class="list-container">
+    {{#each foundLists}}
+        <div>
+            <h3 style="font-size: 18px">{{title}}</h3>
+                {{#each content}}
+                    <p style="font-size: 13px;">{{this}}</p>
+                {{/each}}
 
-    <button>
-        <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
-    </button>
+        <button>
+            <a href="/list/{{_id}}" style="text-decoration: none; color: black;">view</a>
+        </button>
 
-    <form action="/list/{{_id}}/edit-list" method="get">
-        <button type="submit">edit</button>
-    </form>
+        <form action="/list/{{_id}}/edit-list" method="get">
+            <button type="submit">edit</button>
+        </form>
     
-    <form action="/list/{{_id}}/delete-list" method="post">
-        <button type="submit">delete</button>
-    </form>
-{{/each}}
+        <form action="/list/{{_id}}/delete-list" method="post">
+            <button type="submit">delete</button>
+        </form>
+        </div>
+    {{/each}}
+</div>
 
 <br>
 

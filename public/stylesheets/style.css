@@ -62,3 +62,22 @@ button:hover {
   background-color: #f8a889;
   color: white;
 }
+
+.authStyling {
+  background-color: rgba(232, 100, 77, 0.2);
+  border: none;
+  outline: none;
+}
+
+.list-container{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#pic-cred {
+  font-size: xx-small;
+  color: #e8644d;
+  margin-top: 780px;
+}

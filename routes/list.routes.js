@@ -40,6 +40,12 @@ router.get('/all-lists', isLoggedIn, (req, res, next) => {
     })
     .then((foundLists) => {
         console.log(foundLists)
+        foundLists = foundLists.map(list => {
+            return {
+                ...list._doc,
+                content: [list.content[0], list.content[1], '...and more!']
+            }
+        })
         res.render('list-views/all-lists.hbs', {foundLists})
     })
     .catch((err) => {
