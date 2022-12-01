@@ -17,17 +17,20 @@
 }
 
 #navbar li a:hover {
-  color: #fedec4;
+  color: #e8644d;
+  text-decoration: dotted;
 }
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5em;
   background-image: url('/images/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
+  height: 100vh;
 }
 
 a {
@@ -36,7 +39,8 @@ a {
 }
 
 a:hover {
-  color: #fedec4;
+  /* color: #fedec4; */
+  text-shadow: 2px 2px white;
 }
 
 button {
