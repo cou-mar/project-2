@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const noteSchema = new Schema({
     title: {type: String},
     content: {type: [String]},
+    user: {type: Schema.Types.ObjectId, ref: "User"}
 });
 
 const Note = mongoose.model('Note', noteSchema);

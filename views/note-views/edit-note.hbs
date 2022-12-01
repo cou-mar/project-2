@@ -1,0 +1,14 @@
+<form action="/note/{{_id}}/edit-note" method="post">
+    <input type="text" name="title" value="{{title}}">
+
+    {{#each content}}
+        <input type="text" name="content" value="{{this}}">
+    {{/each}}
+
+    <button type="submit">submit changes</button>
+
+    <button>
+        <a href="/note/all-notes" style="text-decoration: none; color:black">back</a>
+        {{!-- CHANGE THIS TO EDITING THE PARTICULAR NOTE INSTEAD OF SEE ALL --}}
+    </button>
+</form>

@@ -1,37 +1,24 @@
 <h1>all notes</h1>
 
-<h3>thumbnail preview of note 1</h3>
-<div>
-    <form action="">
-        <button>view</button>
-        <button>edit</button>
-        <button>delete</button>
-    </form>
-</div>
+{{#each foundNotes}}
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
 
-<h3>thumbnail preview of note 2</h3>
-<div>
-    <form action="">
-        <button>view</button>
-        <button>edit</button>
-        <button>delete</button>
-    </form>
-</div>
+    <button>
+        <a href="{{id}}" style="text-decoration: none; color: black;">view</a>
+    </button>
 
-<h3>thumbnail preview of note 3</h3>
-<div>
-    <form action="">
-        <button>view</button>
-        <button>edit</button>
-        <button>delete</button>
+    <form action="/note/{{_id}}/edit-note" method="get">
+        <button type="submit">edit</button>
     </form>
-</div>
+    
+    <form action="/note/{{_id}}/delete-note" method="post">
+        <button type="submit">delete</button>
+    </form>
+{{/each}}
 
-<h3>thumbnail preview of note 4</h3>
-<div>
-    <form action="">
-        <button>view</button>
-        <button>edit</button>
-        <button>delete</button>
-    </form>
-</div>
+<br>
+
+<button>
+    <a href="/note/note-home" style="text-decoration: none; color: black;">back</a>
+</button>

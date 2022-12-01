@@ -1,10 +1,17 @@
 <form action="/list/{{_id}}/edit-list" method="post">
     <input type="text" name="title" value="{{title}}">
 
-    {{#each content}}
-        <input type="text" name="content" value="{{this}}">
-    {{/each}}
+<div class="list" style="width: 220px;">
+    <ol id="list">
+        {{#each content}}
+            <li><input type="text" name="content" value="{{this}}"></li>
+        {{/each}}
+    </ol>
 
+    <button class="add-new" style="float: right;
+        margin-top: -35px;" type="button">+</button>
+</div>
+    
     <button type="submit">submit changes</button>
 
     <button>
@@ -16,3 +23,5 @@
         <button type="submit">back</button>
     </form> --}}
 </form>
+
+<script src="/javascripts/eventListener.js"></script>

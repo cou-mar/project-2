@@ -8,11 +8,14 @@ Tues 11/29
     - if statements checking for empty lists/notes
 
 Wed 11/30
-    - thumbnail previews for added lists and notes
+    - displaying all lists and notes
+    - edit buttons
+    - delete buttons
     - nav 
     - styling 
 
 Thurs 12/1
+    - styling
     - middleware
     - add + to edit lists hbs so a new line can be added
     - api
