@@ -1,12 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
+const isLoggedIn = require('../middleware/isLoggedIn');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index.hbs', { title: 'untitled' });
 });
 
-router.get('/main', (req, res, next) => {
+router.get('/main', isLoggedIn, (req, res, next) => {
   res.render('main.hbs')
 });
 
