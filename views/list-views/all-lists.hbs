@@ -1,14 +1,12 @@
 <ul id="navbar">
         <li><a href="/main">home</a></li>
-        <li><a href="/auth/signup">sign up</a></li>
-        <li><a href="/auth/login">log in</a></li>
-        <li><a href="/auth/logout">log out</a></li>
         <li><a href="/note/note-home">notes</a></li>
+        <li><a href="/auth/logout">log out</a></li>
       </ul>
 
 <h1>all lists</h1>
 
-<div class="list-container">
+<div class="container">
     {{#each foundLists}}
         <div>
             <h3 style="font-size: 18px">{{title}}</h3>
@@ -16,16 +14,16 @@
                     <p style="font-size: 13px;">{{this}}</p>
                 {{/each}}
 
-        <button>
-            <a href="/list/{{_id}}" style="text-decoration: none; color: black;">view</a>
+        <button class="bttn-container">
+            <a href="/list/{{_id}}"  class="matchTagColors">view</a>
         </button>
 
         <form action="/list/{{_id}}/edit-list" method="get">
-            <button type="submit">edit</button>
+            <button type="submit" class="bttn-container">edit</button>
         </form>
     
         <form action="/list/{{_id}}/delete-list" method="post">
-            <button type="submit">delete</button>
+            <button type="submit" class="bttn-container">delete</button>
         </form>
         </div>
     {{/each}}
@@ -34,5 +32,12 @@
 <br>
 
 <button>
-    <a href="/list/list-home" style="text-decoration: none; color: black;">back</a>
+    <a href="/list/list-home"  class="matchTagColors">back</a>
 </button>
+
+<style>
+    body {
+        background-image: none;
+        background-image: linear-gradient(to left bottom, #fae8d9, #f9dfcc, #f8d5bf, #f7ccb4, #f7c2a9, #f6bba2, #f4b49b, #f3ad95, #f1a790, #efa08b, #ed9a87, #eb9383);
+    }
+</style>

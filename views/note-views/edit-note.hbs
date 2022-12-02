@@ -4,15 +4,15 @@
     {{!-- {{#each content}}
         <input type="text" name="content" value="{{this}}">
     {{/each}} --}}
-
+<br>
     <textarea name="content" id="noteId" cols="30" rows="10">
         {{content}}
     </textarea>
-
+<br>
     <button type="submit">submit changes</button>
 
     <button>
-        <a href="/note/all-notes" style="text-decoration: none; color:black">back</a>
+        <a href="/note/all-notes"   class="matchTagColors">back</a>
         {{!-- CHANGE THIS TO EDITING THE PARTICULAR NOTE INSTEAD OF SEE ALL --}}
     </button>
 </form>

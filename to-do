@@ -17,6 +17,8 @@ Thurs 12/1
     - add + to edit lists hbs so a new line can be added
     - ability to remove line from list
     - styling
+
+potential ideas
     - api
     - nodemailer
     - file uploader

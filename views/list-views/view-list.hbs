@@ -1,14 +1,27 @@
 <h3>{{title}}</h3>
-<p>{{content}}</p>
+{{!-- <p>{{content}}</p> --}}
 
-<form action="/list/{{_id}}/edit-list" method="get" style="text-decoration: none; color: black;">
+<ol>
+    {{#each content}}
+    <li>{{this}}</li>
+    {{/each}}
+</ol>
+
+<form action="/list/{{_id}}/edit-list" method="get">
     <button type="submit">edit</button>
 </form>
 
-<form action="/list/{{_id}}/delete-list" method="post" style="text-decoration: none; color: black;">
+<form action="/list/{{_id}}/delete-list" method="post">
     <button type="submit">delete</button>
 </form>
 
 <button>
-    <a href="/list/all-lists" style="text-decoration: none; color: black;">back</a>
+    <a href="/list/all-lists"   class="matchTagColors">back</a>
 </button>
+
+<style>
+    body {
+        background-image: none;
+        background-image: linear-gradient(to left bottom, #fae8d9, #f9dfcc, #f8d5bf, #f7ccb4, #f7c2a9, #f6bba2, #f4b49b, #f3ad95, #f1a790, #efa08b, #ed9a87, #eb9383);
+    }
+</style>

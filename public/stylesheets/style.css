@@ -1,17 +1,17 @@
-#navbar{
+#navbar {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#navbar li{
+#navbar li {
   list-style: none;
   padding: 0 30px;
 }
 
-#navbar li a{
+#navbar li a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 600;
   color: #c66d5e;
 }
@@ -29,16 +29,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: black;
+  /* background-color: black; */
   height: 100vh;
 }
 
-a {
+.authBttn {
   color: #c66d5e;
   text-decoration: none;
 }
 
-a:hover {
+.authBttn:hover {
   /* color: #fedec4; */
   text-shadow: 2px 2px white;
 }
@@ -55,10 +55,24 @@ button {
   display: inline-block;
   font-size: 12px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 button:hover {
+  background-color: #f8a889;
+  color: white;
+}
+
+.matchTagColors {
+  transition-duration: 0.4s;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.matchTagColors:hover {
   background-color: #f8a889;
   color: white;
 }
@@ -69,15 +83,25 @@ button:hover {
   outline: none;
 }
 
-.list-container{
+.container {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
 }
 
-#pic-cred {
+/* .bttn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+} */
+
+.credit {
   font-size: xx-small;
   color: #e8644d;
-  margin-top: 780px;
+  /* margin-top: 780px; */
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+  height: 10px;
 }

@@ -1,14 +1,21 @@
 <h3>{{title}}</h3>
 <p>{{content}}</p>
 
-<form action="/note/{{_id}}/edit-note" method="get" style="text-decoration: none; color: black;">
+<form action="/note/{{_id}}/edit-note" method="get">
     <button type="submit">edit</button>
 </form>
 
-<form action="/note/{{_id}}/delete-note" method="post" style="text-decoration: none; color: black;">
+<form action="/note/{{_id}}/delete-note" method="post">
     <button type="submit">delete</button>
 </form>
 
 <button>
-    <a href="/note/all-notes" style="text-decoration: none; color: black;">back</a>
+    <a href="/note/all-notes"   class="matchTagColors">back</a>
 </button>
+
+<style>
+    body {
+        background-image: none;
+        background-image: linear-gradient(to left bottom, #fae8d9, #f9dfcc, #f8d5bf, #f7ccb4, #f7c2a9, #f6bba2, #f4b49b, #f3ad95, #f1a790, #efa08b, #ed9a87, #eb9383);
+    }
+</style>

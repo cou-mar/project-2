@@ -42,7 +42,7 @@ router.get('/all-notes', isLoggedIn, (req, res, next) => {
         foundNotes = foundNotes.map(note => {
             return {
                 ...note._doc,
-                content: note.content.substring(0, 100)
+                content: note.content.substring(0, 50)
             }
         })
         res.render('note-views/all-notes.hbs', {foundNotes})
