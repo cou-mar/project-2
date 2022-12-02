@@ -90,11 +90,14 @@ button:hover {
   flex-wrap: wrap;
 }
 
-/* .bttn-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-} */
+.bttn-container:hover {
+  color: white;
+}
+
+.bttn-container a {
+  color: inherit;
+  transition-duration:0s;
+}
 
 .credit {
   font-size: xx-small;
