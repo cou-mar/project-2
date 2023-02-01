@@ -13,4 +13,8 @@ router.get('/main', isLoggedIn, (req, res, next) => {
   res.render('main.hbs', { user: req.session.user })
 });
 
+router.get('/about', (req, res, next) => {
+  res.render('about.hbs')
+});
+
 module.exports = router;
