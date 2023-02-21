@@ -118,6 +118,7 @@ button:hover {
 
 .div-button {
   display: flex;
+  justify-content: center;
   align-items: baseline;
   gap: 10px;
 }

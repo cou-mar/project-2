@@ -8,21 +8,26 @@
 
 <div class="container">
     {{#each foundNotes}}
-    <div>
-        <h3 style="font-size: 18px">{{title}}</h3>
-        <p style="font-size: 13px;">{{content}}</p>
+        <div>
+            <div>
+                <h3 style="font-size: 18px">{{title}}</h3>
+                <p style="font-size: 13px;">{{content}}</p>
+            </div>
 
-        <button class="bttn-container">
-            <a href="/note/{{_id}}" class="matchTagColors">view</a>
-        </button>
+            <div class="div-button">
+                <button class="bttn-container">
+                    <a href="/note/{{_id}}" class="matchTagColors">view</a>
+                </button>
 
-        <form action="/note/{{_id}}/edit-note" method="get">
-            <button  class="bttn-container" type="submit">edit</button>
-        </form>
-        
-        <form action="/note/{{_id}}/delete-note" method="post">
-            <button  class="bttn-container" type="submit">delete</button>
-        </form>
+                <form action="/note/{{_id}}/edit-note" method="get">
+                    <button  class="bttn-container" type="submit">edit</button>
+                </form>
+                
+                <form action="/note/{{_id}}/delete-note" method="post">
+                    <button  class="bttn-container" type="submit">delete</button>
+                </form>
+            </div>
+
         </div>
     {{/each}}
 </div>
